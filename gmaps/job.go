@@ -22,7 +22,7 @@ type GmapJob struct {
 }
 
 func NewGmapJob(id, langCode, query string, maxDepth int, extractEmail bool, geoCoordinates string, zoom int) *GmapJob {
-	query = url.QueryEscape(query)
+	query = url.QueryEscape(query) + "in singapore"
 
 	const (
 		maxRetries = 3
